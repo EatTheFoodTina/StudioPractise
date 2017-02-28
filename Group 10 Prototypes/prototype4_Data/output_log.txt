@@ -1,0 +1,37 @@
+Mono path[0] = 'F:/GitHub/second-semester-s2-level-4-5-group-10/Group 10 Prototypes/prototype4_Data/Managed'
+Mono path[1] = 'F:/GitHub/second-semester-s2-level-4-5-group-10/Group 10 Prototypes/prototype4_Data/Mono'
+Mono config path = 'F:/GitHub/second-semester-s2-level-4-5-group-10/Group 10 Prototypes/prototype4_Data/Mono/etc'
+PlayerConnection initialized from F:/GitHub/second-semester-s2-level-4-5-group-10/Group 10 Prototypes/prototype4_Data (debug = 0)
+PlayerConnection initialized network socket : 0.0.0.0 55141
+Multi-casting "[IP] 25.60.165.185 [Port] 55141 [Flags] 2 [Guid] 3289362420 [EditorId] 1240657342 [Version] 1048832 [Id] WindowsPlayer(AKLenovo) [Debug] 0" to [225.0.0.222:54997]...
+Started listening to [0.0.0.0:55141]
+PlayerConnection already initialized - listening to [0.0.0.0:55141]
+Initialize engine version: 5.5.1f1 (88d00a7498cd)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: AMD Radeon HD 8650G + R5 M200 Dual Graphics (ID=0x990b)
+    Vendor:   ATI
+    VRAM:     2773 MB
+    Driver:   15.200.1062.1004
+Begin MonoManager ReloadAssembly
+Platform assembly: F:\GitHub\second-semester-s2-level-4-5-group-10\Group 10 Prototypes\prototype4_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading F:\GitHub\second-semester-s2-level-4-5-group-10\Group 10 Prototypes\prototype4_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: F:\GitHub\second-semester-s2-level-4-5-group-10\Group 10 Prototypes\prototype4_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading F:\GitHub\second-semester-s2-level-4-5-group-10\Group 10 Prototypes\prototype4_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: F:\GitHub\second-semester-s2-level-4-5-group-10\Group 10 Prototypes\prototype4_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading F:\GitHub\second-semester-s2-level-4-5-group-10\Group 10 Prototypes\prototype4_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: F:\GitHub\second-semester-s2-level-4-5-group-10\Group 10 Prototypes\prototype4_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading F:\GitHub\second-semester-s2-level-4-5-group-10\Group 10 Prototypes\prototype4_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: F:\GitHub\second-semester-s2-level-4-5-group-10\Group 10 Prototypes\prototype4_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading F:\GitHub\second-semester-s2-level-4-5-group-10\Group 10 Prototypes\prototype4_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+- Completed reload, in  0.068 seconds
+Platform assembly: F:\GitHub\second-semester-s2-level-4-5-group-10\Group 10 Prototypes\prototype4_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: F:\GitHub\second-semester-s2-level-4-5-group-10\Group 10 Prototypes\prototype4_Data\Managed\System.dll (this message is harmless)
+desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.786729 ms
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 1dec -> priority: 1 
