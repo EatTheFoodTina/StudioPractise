@@ -30,7 +30,7 @@ public class PlayerScript : MonoBehaviour
     HealthController health;
     AudioSource sound;
     public AudioClip snowImpact;
-    public AudioClip snowCrunch;
+    //public AudioClip snowCrunch;
     public AudioClip grunt;
     void Start()
     {
@@ -127,10 +127,10 @@ public class PlayerScript : MonoBehaviour
     }
     void OnCollisionStay2D(Collision2D col)
     {
-        if (col.gameObject.tag == "ground" && !rb.velocity.Equals(Vector2.zero))
-        {
-            sound.PlayOneShot(snowCrunch);
-        }
+        //if (col.gameObject.tag == "ground" && !rb.velocity.Equals(Vector2.zero))
+        //  {
+        //     sound.PlayOneShot(snowCrunch);
+        //  }
     }
     void respawn()
     {
