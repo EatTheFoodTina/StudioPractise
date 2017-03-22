@@ -1,11 +1,11 @@
-Mono path[0] = 'F:/Group Project/second-semester-s2-level-4-5-group-10/Group 10 Prototypes/prototype4_Data/Managed'
-Mono path[1] = 'F:/Group Project/second-semester-s2-level-4-5-group-10/Group 10 Prototypes/prototype4_Data/Mono'
-Mono config path = 'F:/Group Project/second-semester-s2-level-4-5-group-10/Group 10 Prototypes/prototype4_Data/Mono/etc'
-PlayerConnection initialized from F:/Group Project/second-semester-s2-level-4-5-group-10/Group 10 Prototypes/prototype4_Data (debug = 0)
-PlayerConnection initialized network socket : 0.0.0.0 55473
-Multi-casting "[IP] 10.128.3.89 [Port] 55473 [Flags] 2 [Guid] 922599239 [EditorId] 3134974120 [Version] 1048832 [Id] WindowsPlayer(Games-105-024) [Debug] 0" to [225.0.0.222:54997]...
-Started listening to [0.0.0.0:55473]
-PlayerConnection already initialized - listening to [0.0.0.0:55473]
+Mono path[0] = 'E:/Group Project/second-semester-s2-level-4-5-group-10/Group 10 Prototypes/prototype4_Data/Managed'
+Mono path[1] = 'E:/Group Project/second-semester-s2-level-4-5-group-10/Group 10 Prototypes/prototype4_Data/Mono'
+Mono config path = 'E:/Group Project/second-semester-s2-level-4-5-group-10/Group 10 Prototypes/prototype4_Data/Mono/etc'
+PlayerConnection initialized from E:/Group Project/second-semester-s2-level-4-5-group-10/Group 10 Prototypes/prototype4_Data (debug = 0)
+PlayerConnection initialized network socket : 0.0.0.0 55388
+Multi-casting "[IP] 10.128.3.216 [Port] 55388 [Flags] 2 [Guid] 762773294 [EditorId] 3134974120 [Version] 1048832 [Id] WindowsPlayer(Games-106-015) [Debug] 0" to [225.0.0.222:54997]...
+Started listening to [0.0.0.0:55388]
+PlayerConnection already initialized - listening to [0.0.0.0:55388]
 Initialize engine version: 5.5.1f1 (88d00a7498cd)
 GfxDevice: creating device client; threaded=1
 Direct3D:
@@ -13,26 +13,26 @@ Direct3D:
     Renderer: NVIDIA GeForce GTX 760 (ID=0x1187)
     Vendor:   NVIDIA
     VRAM:     1989 MB
-    Driver:   21.21.13.7270
+    Driver:   10.18.13.6175
 Begin MonoManager ReloadAssembly
-Platform assembly: F:\Group Project\second-semester-s2-level-4-5-group-10\Group 10 Prototypes\prototype4_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading F:\Group Project\second-semester-s2-level-4-5-group-10\Group 10 Prototypes\prototype4_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: F:\Group Project\second-semester-s2-level-4-5-group-10\Group 10 Prototypes\prototype4_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading F:\Group Project\second-semester-s2-level-4-5-group-10\Group 10 Prototypes\prototype4_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: F:\Group Project\second-semester-s2-level-4-5-group-10\Group 10 Prototypes\prototype4_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading F:\Group Project\second-semester-s2-level-4-5-group-10\Group 10 Prototypes\prototype4_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: F:\Group Project\second-semester-s2-level-4-5-group-10\Group 10 Prototypes\prototype4_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading F:\Group Project\second-semester-s2-level-4-5-group-10\Group 10 Prototypes\prototype4_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: F:\Group Project\second-semester-s2-level-4-5-group-10\Group 10 Prototypes\prototype4_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
-Loading F:\Group Project\second-semester-s2-level-4-5-group-10\Group 10 Prototypes\prototype4_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
-- Completed reload, in  0.689 seconds
-Platform assembly: F:\Group Project\second-semester-s2-level-4-5-group-10\Group 10 Prototypes\prototype4_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: F:\Group Project\second-semester-s2-level-4-5-group-10\Group 10 Prototypes\prototype4_Data\Managed\System.dll (this message is harmless)
+Platform assembly: E:\Group Project\second-semester-s2-level-4-5-group-10\Group 10 Prototypes\prototype4_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading E:\Group Project\second-semester-s2-level-4-5-group-10\Group 10 Prototypes\prototype4_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: E:\Group Project\second-semester-s2-level-4-5-group-10\Group 10 Prototypes\prototype4_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading E:\Group Project\second-semester-s2-level-4-5-group-10\Group 10 Prototypes\prototype4_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: E:\Group Project\second-semester-s2-level-4-5-group-10\Group 10 Prototypes\prototype4_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading E:\Group Project\second-semester-s2-level-4-5-group-10\Group 10 Prototypes\prototype4_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: E:\Group Project\second-semester-s2-level-4-5-group-10\Group 10 Prototypes\prototype4_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading E:\Group Project\second-semester-s2-level-4-5-group-10\Group 10 Prototypes\prototype4_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: E:\Group Project\second-semester-s2-level-4-5-group-10\Group 10 Prototypes\prototype4_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading E:\Group Project\second-semester-s2-level-4-5-group-10\Group 10 Prototypes\prototype4_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+- Completed reload, in  1.677 seconds
+Platform assembly: E:\Group Project\second-semester-s2-level-4-5-group-10\Group 10 Prototypes\prototype4_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: E:\Group Project\second-semester-s2-level-4-5-group-10\Group 10 Prototypes\prototype4_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 3200x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.990501 ms
+UnloadTime: 2.336066 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 1fa0 -> priority: 1 
-  Thread -> id: 15e0 -> priority: 1 
+  Thread -> id: 1b60 -> priority: 1 
+  Thread -> id: f9c -> priority: 1 

@@ -4,11 +4,11 @@ using UnityEngine.UI;
 public class timer : MonoBehaviour
 {
     int secondsRemaining = 0;
-    int minsRemaining = 5;
+    int minsRemaining = 3;
     public Text timerText;
     void Start()
     {
-        timerText.color = Color.white;
+        timerText.color = Color.red;
         InvokeRepeating("timerDecrememnt", 0, 1.0f);
     }
     void timerDecrememnt()
@@ -21,7 +21,7 @@ public class timer : MonoBehaviour
             if (minsRemaining == 0)
             {
                 CancelInvoke();
-                //end game
+                // end game
             }
         }
     }

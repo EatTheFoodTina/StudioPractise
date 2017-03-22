@@ -6,6 +6,7 @@ public class FallingItemSpawner : MonoBehaviour
     public int time = 0;
     public int minTime = 5;
     public int maxTime = 20;
+    public int item;
     void Start()
     {
         time = Random.Range(minTime, maxTime);
@@ -20,7 +21,7 @@ public class FallingItemSpawner : MonoBehaviour
         }
         if (time == 0)
         {
-            int item = Random.Range(0, items.Length - 1);
+            item = Random.Range(0, items.Length);
             spawnItem(item);
             time = Random.Range(minTime, maxTime);
             return;
