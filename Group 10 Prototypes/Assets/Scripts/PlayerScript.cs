@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -8,10 +9,10 @@ public class PlayerScript : MonoBehaviour
     public KeyCode JumpKey;
     public KeyCode AttackFrontKey;
     public KeyCode AttackDownKey;
-    public GameObject oppenent;
-    public GameObject oppenentsShovel;
+    public GameObject opponent;
+    public PlayerScript opponentScript;
+    public GameObject opponentsShovel;
     public BoxCollider2D shovelSwingFront; // front shovel collider
-    public BoxCollider2D shovelSwingDown; // down shovel collider
     public float shovelSwingTime = 0.1f; // time in seconds that the shovel collider exists for
     public float moveSpeed = 5f;
     public float jumpForce = 5;
@@ -20,29 +21,27 @@ public class PlayerScript : MonoBehaviour
     bool canJump = true;
     bool jump2 = true;
     public bool facingLeft;
-    public bool wallJump = false;
-    public GameObject respawnLocation;
+    public Vector2 respawnLocation;
     public float spawnVertOffset = 1f;
-    float jumpXDirection;
-    float jumpYDirection;
     Rigidbody2D rb;
-    public GameObject healthBar;
-    HealthController health;
+    public Text scoreDisplay;
     AudioSource sound;
     public AudioClip snowImpact;
     //public AudioClip snowCrunch;
     public AudioClip grunt;
+    public int score;
+    public int player;
     void Start()
     {
-        health = healthBar.GetComponent<HealthController>();
+        opponentScript = opponent.GetComponent<PlayerScript>();
         rb = GetComponent<Rigidbody2D>();
         sound = GetComponent<AudioSource>();
         shovelSwingFront.enabled = false;
-        shovelSwingDown.enabled = false;
         respawn();
     }
     void Update()
     {
+        scoreDisplay.text = "Player " + player + " Score: " + score.ToString();
         if (Input.GetKey(LeftKey)) // move left
         {
             rb.AddForce(Vector2.left * moveSpeed);
@@ -57,29 +56,10 @@ public class PlayerScript : MonoBehaviour
         {
             if (canJump)
             {
-                //Vector2 jumpDirection = new Vector2(jumpXDirection, jumpYDirection);
-                //if (jumpXDirection > 0 && jumpYDirection > -1 && jumpYDirection < 1 && wallJump)
-                //{
-                //    jumpDirection += Vector2.right;
-                //}
-                //else if (jumpXDirection < 0 && jumpYDirection > -1 && jumpYDirection < 1 && wallJump)
-                //{
-                //    jumpDirection += Vector2.left;
-                //}
-                //else if (jumpYDirection > 1)
-                //{
-                //    jumpDirection = Vector2.up;
-                //}
-                //else if (jumpYDirection < -1 && wallJump)
-                //{
-                //    jumpDirection = Vector2.down;
-                //}
-                //jumpDirection.Normalize();
-                //rb.velocity = (jumpDirection * jumpForce) + new Vector2(rb.velocity.x, 0);
                 rb.velocity = (Vector2.up * jumpForce) + new Vector2(rb.velocity.x, 0);
                 canJump = false;
             }
-            else if (jump2 && !wallJump)
+            else if (jump2)
             {
                 rb.velocity = (Vector2.up * jumpForce) + new Vector2(rb.velocity.x, 0);
                 jump2 = false;
@@ -89,13 +69,9 @@ public class PlayerScript : MonoBehaviour
         {
             StartCoroutine(swingShovel(shovelSwingTime));
         }
-        if (Input.GetKeyDown(AttackDownKey))
-        {
-            StartCoroutine(swingShovelDown(shovelSwingTime));
-        }
         if (transform.position.y < -5)
         { // if the player falls off the platform
-            health.damage(2);
+            opponentScript.score++;
             respawn();
         }
     }
@@ -104,25 +80,22 @@ public class PlayerScript : MonoBehaviour
         if (col.gameObject.tag == "alcohol")
         {
             col.gameObject.SetActive(false);
-            health.damage(-2);
+            score++;
         }
         if (col.gameObject.tag == "ground" || col.gameObject.tag == "Player")
         {
             if (!canJump) { sound.PlayOneShot(snowImpact); }
             canJump = true; // can jump if touching ground
             jump2 = true; // enable double jump when the player lands
-            //jumpXDirection = transform.position.x - col.transform.position.x;
-            //jumpYDirection = transform.position.y - col.transform.position.y;
         }
         if (col.gameObject.tag == "spike")
         {
             respawn(); // respawn if player hits spike
-            health.damage(2);
+            opponentScript.score++;
         }
         if (col.gameObject.tag == "explosive")
         {
             rb.AddForce(new Vector2(transform.position.x - col.transform.position.x, transform.position.y - col.transform.position.y).normalized * exForce);
-            health.damage(2);
         }
     }
     void OnCollisionStay2D(Collision2D col)
@@ -135,17 +108,16 @@ public class PlayerScript : MonoBehaviour
     void respawn()
     {
         rb.velocity = Vector2.zero;
-        transform.position = respawnLocation.transform.position + new Vector3(0, spawnVertOffset, 0);
+        transform.position = respawnLocation + new Vector2(0, spawnVertOffset);
     }
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject == oppenentsShovel)
+        if (col.gameObject == opponentsShovel)
         {
             sound.PlayOneShot(grunt);
-            float xDif = transform.position.x - oppenent.transform.position.x;
-            float yDif = transform.position.y - oppenent.transform.position.y;
+            float xDif = transform.position.x - opponent.transform.position.x;
+            float yDif = transform.position.y - opponent.transform.position.y;
             GetComponent<Rigidbody2D>().AddForce(new Vector2(xDif, yDif).normalized * shovelForce);
-            health.damage(1);
         }
     }
     IEnumerator swingShovel(float swingTime)
@@ -153,12 +125,6 @@ public class PlayerScript : MonoBehaviour
         shovelSwingFront.enabled = true;
         yield return new WaitForSeconds(swingTime);
         shovelSwingFront.enabled = false;
-    }
-    IEnumerator swingShovelDown(float swingTime)
-    {
-        shovelSwingDown.enabled = true;
-        yield return new WaitForSeconds(swingTime);
-        shovelSwingDown.enabled = false;
     }
     void Flip()
     {
