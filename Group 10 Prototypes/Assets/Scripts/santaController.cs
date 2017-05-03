@@ -3,13 +3,12 @@
 public class santaController : MonoBehaviour
 {
     public GameObject santa;
-    public int time;
+    public int time = 60;
     public int maxTime;
     public int minTime;
     Rigidbody2D santaRb;
     void Start()
     {
-        time = Random.Range(minTime, maxTime);
         InvokeRepeating("timerDecrement", 0, 1);
         santaRb = santa.GetComponent<Rigidbody2D>();
     }
